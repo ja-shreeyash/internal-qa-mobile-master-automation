@@ -1,0 +1,30 @@
+[server]
+port = 4444
+
+[sessionqueue]
+session-request-timeout = 500
+
+[node]
+detect-drivers = false
+
+[relay]
+url = "http://127.0.0.1:4723/wd/hub"
+status-endpoint = "/status"
+configs = [
+    "2", "{\"browserName\": \"\", \"platformName\": \"Android\"}",
+    "1", "{\"browserName\": \"\", \"platformName\": \"Android\"}"
+#   "1", "{\"browserName\": \"Pixel 4 API 30\", \"platformName\": \"Android\", \"appium:platformVersion\": \"11\"}",
+#   "1", "{\"browserName\": \"android\", \"platformName\": \"Android\", \"appium:platformVersion\": \"11\"}",
+#   "1", "{\"platformName\": \"Android\", \"appium:platformVersion\": \"11\"}",
+#   "1", "{\"browserName\": \"chrome\", \"platformName\": \"Android\", \"appium:platformVersion\": \"11\"}",
+#
+#   "1", "{\"browserName\": \"Pixel 4 API 30\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}",
+#   "1", "{\"browserName\": \"android\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}",
+#   "1", "{\"platformName\": \"android\", \"appium:platformVersion\": \"11\"}",
+#   "1", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}",
+#
+#   "1", "{\"appPackage\": \"com.jobadder.android\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
+#   "1", "{\"appium:appPackage\": \"com.jobadder.android\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
+#   "1", "{\"appPackage\":\"com.jobadder.android\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}",
+#   "1", "{\"appium:app\": \"D:/qa-mobile/app/JA.apk\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
+]

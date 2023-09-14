@@ -1,0 +1,15 @@
+[
+  {
+    "name": "R5CW519N99N",
+    "capabilities": {
+      "automationName": "UiAutomator2",
+      "noReset": false,
+      "newCommandTimeout": 60,
+      "udid": "R5CW519N99N",
+      "platformName": "Android",
+      "platformVersion": "13",
+      "appPackage": "com.jobadder.jobadderapp",
+      "app": ""
+    }
+  }
+]

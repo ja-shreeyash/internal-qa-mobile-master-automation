@@ -1,0 +1,81 @@
+# WebDriverAgent Configuration on MacOSX.
+
+To configure this project on MacOSX and Xcode you need to follow those steps:
+
+## 1. Use the correct WDA version.
+
+Extract the package
+```
+docs/appium-webdriveragent.zip
+```
+
+## 2. Make sure you have the project on the correct path.
+
+Copy the project into the path:
+
+```
+cd "/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent"
+```
+
+Create the following folder:
+
+```
+mkdir -p Resources/WebDriverAgent.bundle
+```
+
+Once you have it, execute the Bootstrap Script:
+```
+./Scripts/bootstrap.sh
+```
+
+## 3. Open the project on Xcode.
+
+Once you run the script, open the file __WebDriverAgent.xcodeproj__ with the Xcode.
+
+![Alt text](./img/1.png?raw=true "Webdriver agent location")
+
+Now, select the WebDriverAgent project and click on the __Info__ tab to change on the __Deployment Target__ , the __iOS Deployment Target__. Select the iOS version you want to test your application. 
+
+![Alt text](./img/2.png?raw=true "Info tab")
+
+On the __Build Settings__ tab, on the Deployment settings, change the __iOS Deployment Target__ as well, to match the same version as the Info tab.
+
+![Alt text](./img/3.png?raw=true "Build Settings tab")
+
+
+Once you change the version, make sure you have a __simulator__ selected on the device list and click on __Product -``` Test __. 
+The project will compile and execute the WebDriverAgent project on the simulator you choose. 
+
+![Alt text](./img/4.png?raw=true "Product > Test")
+
+
+Finally, close the Xcode and set on the archetype project the same version you select on the Project to run your application. 
+
+If you want to change the version, e.g.: iOS 10.3 instead of iOS 11.0, you need to repeat all the steps of this tutorial. 
+
+## 4. Problems. 
+
+Sometimes, the WDA project have some problems to compile and to apply the iOS Version you selected. If you face any problem, clean the __DerivedData__ folder on the XCode. 
+
+To clean the DerivedData folder you need to:
+
+1. Click on Xcode -``` Settings... -``` Locations -``` (-```) DerivedData 
+
+![Alt text](./img/5.png?raw=true "Settings > DerivedData")
+
+2. Once you have the DerivedData folder on the Finder, close the Xcode, and delete all the content inside the DerivedData folder.
+
+![Alt text](./img/6.png?raw=true "DerivedData Folder")
+
+3. Empty the Trash.
+
+4. Open the Xcode and repeat all the steps again.
+
+Also you can remove all the data from the command line typing:
+
+```bash
+rm -rf ~/Library/Developer/Xcode/DerivedData
+
+rm -rf ~/Library/Caches/com.apple.dt.Xcode
+```
+

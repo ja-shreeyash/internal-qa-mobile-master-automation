@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Login and Search Test Suite" verbose="2" thread-count="3">
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+    <test name="Tests">
+        <classes>
+            <class name="apptests.LoginTests"/>
+            <class name="apptests.SearchTests"/>
+        </classes>
+    </test> <!-- qa-mobile -->
+</suite> <!-- Default Suite -->
